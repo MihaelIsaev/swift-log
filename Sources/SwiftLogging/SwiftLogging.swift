@@ -454,7 +454,7 @@ extension Logger {
     ///
     ///     logger.info("Hello \(world)")
     ///
-    public struct Message: ExpressibleByStringLiteral, Equatable, CustomStringConvertible, ExpressibleByStringInterpolation {
+    public struct Message: ExpressibleByStringLiteral, Equatable, CustomStringConvertible {
         public init(stringInterpolation strings: Logger.Message...) {
             value = strings.map { $0.value }.joined(separator: " ")
         }
